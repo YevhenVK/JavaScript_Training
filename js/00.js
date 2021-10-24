@@ -68,18 +68,67 @@
 
 /////
 
-function makePizza(pizzaName, callback) {
-  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
-	callback(pizzaName);
-}
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+// 	callback(pizzaName);
+// }
 
-makePizza(" ", function eatPizza(pizzaName) {
-  console.log(`Eating pizza ${pizzaName}.`);
-});
+// makePizza(" ", function eatPizza(pizzaName) {
+//   console.log(`Eating pizza ${pizzaName}.`);
+// });
 
-makePizza("Royal Grand", function deliverPizza(pizzaName) {
-  console.log(`Delivering pizza ${pizzaName}.`);
-});
-// Change code below this line
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// // Change code below this line
 
-makePizza("Ultracheese");
+// makePizza("Ultracheese");
+
+// const students = [
+//   { name: "Манго", score: 83 },
+//   { name: "Поли", score: 59 },
+//   { name: "Аякс", score: 37 },
+//   { name: "Киви", score: 94 },
+//   { name: "Хьюстон", score: 64 },
+// ];
+
+// const totalScore = students.reduce((total, student) => {
+//   return total + student.score;
+// }, );
+
+// const averageScore = totalScore / students.length;
+
+
+
+//////////
+const objC = {
+  z: 5,
+};
+console.log('objC', objC);
+
+const objB = Object.create(objC);
+objB.y = 2;
+
+console.log('objB', objB);
+
+const objA = Object.create(objB);
+objA.x = 1;
+
+// // console.log(objC.hasOwnProperty('z'));
+// console.log(objB.y);
+// console.log(objB.z);
+
+console.log('objA', objA);
+
+
+
+
+const baseSalary = 30000;
+const overtime = 10;
+const rate = 20;
+
+const getWage = (baseSalary, overtime, rate) => {
+  return baseSalary + overtime * rate;
+};
+
+getWage(baseSalary, overtime, rate);
