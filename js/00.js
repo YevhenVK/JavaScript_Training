@@ -101,34 +101,134 @@
 
 
 //////////
-const objC = {
-  z: 5,
-};
-console.log('objC', objC);
+// const objC = {
+//   z: 5,
+// };
+// console.log('objC', objC);
 
-const objB = Object.create(objC);
-objB.y = 2;
+// const objB = Object.create(objC);
+// objB.y = 2;
 
-console.log('objB', objB);
+// console.log('objB', objB);
 
-const objA = Object.create(objB);
-objA.x = 1;
+// const objA = Object.create(objB);
+// objA.x = 1;
 
-// // console.log(objC.hasOwnProperty('z'));
-// console.log(objB.y);
-// console.log(objB.z);
+// // // console.log(objC.hasOwnProperty('z'));
+// // console.log(objB.y);
+// // console.log(objB.z);
 
-console.log('objA', objA);
-
-
+// console.log('objA', objA);
 
 
-const baseSalary = 30000;
-const overtime = 10;
-const rate = 20;
 
-const getWage = (baseSalary, overtime, rate) => {
-  return baseSalary + overtime * rate;
-};
 
-getWage(baseSalary, overtime, rate);
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
+
+// const getWage = (baseSalary, overtime, rate) => {
+//   return baseSalary + overtime * rate;
+// };
+
+// getWage(baseSalary, overtime, rate);
+
+
+///////////////////
+// const Car = function ({ brand, model, price } = {}) {
+  
+//   this.brand = brand;
+//   this.model = model;
+//   this.price = price;
+
+//   // this.changePrice = function (newPrice) {
+//   //   this.price = newPrice;
+//   // };
+// };
+
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice;
+// };
+
+// const myCar = new Car({
+//   brand: "Audi",
+//   model: 'Q3',
+//   price: 35000,
+// });
+// console.log(myCar);
+
+// myCar.changePrice(10000);
+
+// const myCar2 = new Car({
+//   brand: "BMW",
+//   model: 'X6',
+//   price: 50000,
+// });
+// console.log(myCar2);
+
+// const myCar3 = new Car({
+//   brand: "Audi",
+//   model: 'A6',
+//   price: 65000,
+// });
+// console.log(myCar3);
+
+///////////////////////
+
+
+
+// class Car {
+//   // Change code below this line
+//   #brand;
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   getBrand() {
+//     return this.#brand;
+//   }
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+
+//   // Change code above this line
+// }
+
+
+////////////////////////////
+
+const horgvarts = {
+    griffindor: [
+        {name: "Harry", points: 15},
+        {name: "Hermiona", points: 16}, 
+        {name: "Ron", points: 14}],
+    slizerin: [
+        {name: "Goyl", points: 25},
+        {name: "Draco", points: 36}, 
+        {name: "Crabbe", points: 14}],
+
+    isOnFaculty(faculty){
+        const keys = Object.keys(horgvarts);
+        //console.log(keys)
+
+        for (const key of keys){
+            if(key === faculty){
+                //console.log(key);
+                const searchName = this[key];
+                //console.log(searchName);
+                const fff = searchName.forEach(student => console.log(student.name));
+                //console.log(fff)
+            }
+            } 
+        },
+        
+    totalPoint(){
+        const totalPoint = this.griffindor.reduce((total, point) => 
+         total + point.points, 0)
+         //console.log(totalPoint);
+    }
+}
+
+horgvarts.isOnFaculty("slizerin");
+horgvarts.totalPoint("griffindor");
